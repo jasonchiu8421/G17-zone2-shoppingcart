@@ -77,10 +77,10 @@ function showLottery() {
   `;
 }
 
-function showLose() {
-  // Accepts a type: 'tooMany' or 'notEnough'
+
+function showLose(type) {
   let message = '';
-  if (arguments[0] === 'notEnough') {
+  if (type === 'notEnough') {
     message = "You don't have everything you need.";
   } else {
     message = "You brought too many things you don't need.";
@@ -94,6 +94,7 @@ function showLose() {
       </div>
     </div>
   `;
+}
 
 window.showLose = showLose;
 
@@ -112,7 +113,6 @@ window.closeLoseModal = function() {
   const modal = document.querySelector('.lose-modal');
   if (modal) modal.remove();
 };
-}
 
 window.resetCart = function() {
   // Reset cart to the original items.json contents
