@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+#app {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 24px 16px 16px 16px;
+}
+.cart-title {
+  font-size: 1.5em;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.cart-list {
+  max-height: 320px;
+  overflow-y: auto;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  background: #fafafa;
+}
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 8px;
+  border-bottom: 1px solid #eee;
+}
+.cart-item:last-child {
+  border-bottom: none;
+}
+.item-info {
+  display: flex;
+  flex-direction: column;
+}
+.item-name {
+  font-weight: 500;
+}
+.item-cost {
+  color: #888;
+  font-size: 0.95em;
+}
+.remove-btn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-left: 12px;
+}
+.cart-total {
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 16px;
+}
+.buy-btn {
+  width: 100%;
+  padding: 12px;
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.buy-btn:hover {
+  background: #219150;
+}
+.lottery-modal, .lose-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.lottery-content, .lose-content {
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+.lottery-letter {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #27ae60;
+  margin-bottom: 12px;
+}
+.lose-message {
+  font-size: 1.2em;
+  color: #e74c3c;
+  margin-bottom: 16px;
+}
+.reset-btn {
+  padding: 10px 24px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.reset-btn:hover {
+  background: #217dbb;
+}
