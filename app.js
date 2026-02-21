@@ -21,7 +21,7 @@ function renderCart() {
     <div class="cart-list">
       ${cartItems.map((item, idx) => `
         <div class="cart-item">
-          <img src="${item.image}" alt="${item.name}" class="item-image" style="width:48px;height:48px;margin-right:12px;border-radius:6px;object-fit:cover;" />
+          <img src="${item.image}" alt="${item.name}" class="item-image" />
           <div class="item-info">
             <span class="item-name">${item.name}</span>
             <span class="item-cost">$${item.cost.toFixed(2)}</span>

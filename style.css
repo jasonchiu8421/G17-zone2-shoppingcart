@@ -1,83 +1,113 @@
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f7f7f7;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   margin: 0;
   padding: 0;
 }
 #app {
-  max-width: 400px;
-  margin: 40px auto;
+  max-width: 520px;
+  margin: 48px auto;
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 24px 16px 16px 16px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  padding: 32px 24px 24px 24px;
 }
 .cart-title {
-  font-size: 1.5em;
-  margin-bottom: 16px;
-  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: left;
+  color: #222;
+  letter-spacing: 0.5px;
 }
 .cart-list {
-  max-height: 320px;
+  max-height: 400px;
   overflow-y: auto;
-  margin-bottom: 16px;
-  border-radius: 6px;
-  border: 1px solid #eee;
-  background: #fafafa;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  background: #fafbfc;
+  padding: 8px;
 }
 .cart-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 12px 8px;
-  border-bottom: 1px solid #eee;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  transition: box-shadow 0.2s;
 }
-.cart-item:last-child {
-  border-bottom: none;
+.cart-item:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.item-image {
+  width: 56px;
+  height: 56px;
+  margin-right: 18px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #e0e0e0;
+  background: #f5f5f5;
 }
 .item-info {
+  flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .item-name {
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 4px;
 }
 .item-cost {
   color: #888;
-  font-size: 0.95em;
+  font-size: 1em;
 }
 .remove-btn {
   background: none;
   border: none;
   color: #e74c3c;
-  font-size: 1.2em;
+  font-size: 1.5em;
   cursor: pointer;
-  margin-left: 12px;
+  margin-left: 16px;
+  transition: color 0.2s;
+}
+.remove-btn:hover {
+  color: #c0392b;
 }
 .cart-total {
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: bold;
   text-align: right;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  color: #222;
 }
 .buy-btn {
   width: 100%;
-  padding: 12px;
-  background: #27ae60;
+  padding: 16px;
+  background: linear-gradient(90deg, #ff9800 0%, #ff5722 100%);
   color: #fff;
   border: none;
-  border-radius: 6px;
-  font-size: 1.1em;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(255,152,0,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
 }
 .buy-btn:hover {
-  background: #219150;
+  background: linear-gradient(90deg, #ff5722 0%, #ff9800 100%);
+  box-shadow: 0 4px 16px rgba(255,152,0,0.16);
 }
 .lottery-modal, .lose-modal {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.18);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,32 +115,36 @@ body {
 }
 .lottery-content, .lose-content {
   background: #fff;
-  padding: 32px 24px;
-  border-radius: 10px;
+  padding: 40px 32px;
+  border-radius: 16px;
   text-align: center;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
 }
 .lottery-letter {
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: bold;
-  color: #27ae60;
-  margin-bottom: 12px;
+  color: #ff9800;
+  margin-bottom: 18px;
 }
 .lose-message {
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: #e74c3c;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 .reset-btn {
-  padding: 10px 24px;
-  background: #3498db;
+  padding: 12px 32px;
+  background: linear-gradient(90deg, #2196f3 0%, #21cbf3 100%);
   color: #fff;
   border: none;
-  border-radius: 6px;
-  font-size: 1em;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 500;
   cursor: pointer;
   margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 0;
+  transition: background 0.2s;
 }
 .reset-btn:hover {
-  background: #217dbb;
+  background: linear-gradient(90deg, #21cbf3 0%, #2196f3 100%);
 }
