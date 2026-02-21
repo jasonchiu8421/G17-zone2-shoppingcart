@@ -1,17 +1,19 @@
 // Shopping Cart App for Room Escape Game
 const app = document.getElementById('app');
 
+
 let truthItems = [];
 let cartItems = [];
 
-// Fetch the truth.json file
-fetch('truth.json')
-  .then(res => res.json())
-  .then(data => {
-    truthItems = data.items;
-    cartItems = JSON.parse(JSON.stringify(truthItems));
-    renderCart();
-  });
+// Fetch both items.json (for cart) and truth.json (for win/lose check)
+Promise.all([
+  fetch('items.json').then(res => res.json()),
+  fetch('truth.json').then(res => res.json())
+]).then(([itemsData, truthData]) => {
+  cartItems = JSON.parse(JSON.stringify(itemsData.items));
+  truthItems = truthData.items;
+  renderCart();
+});
 
 function renderCart() {
   app.innerHTML = `
@@ -79,6 +81,11 @@ function showLose() {
 }
 
 window.resetCart = function() {
-  cartItems = JSON.parse(JSON.stringify(truthItems));
-  renderCart();
+  // Reset cart to the original items.json contents
+  fetch('items.json')
+    .then(res => res.json())
+    .then(data => {
+      cartItems = JSON.parse(JSON.stringify(data.items));
+      renderCart();
+    });
 };
