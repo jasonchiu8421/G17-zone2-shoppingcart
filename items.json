@@ -1,14 +1,14 @@
 {
   "items": [
-    { "name": "Toothbrush", "cost": 2.5 },
-    { "name": "Towel", "cost": 5.0 },
-    { "name": "Mug", "cost": 3.0 },
-    { "name": "Notebook", "cost": 2.0 },
-    { "name": "Pen", "cost": 1.0 },
-    { "name": "Spoon", "cost": 1.5 },
-    { "name": "Plate", "cost": 2.5 },
-    { "name": "Soap", "cost": 1.2 },
-    { "name": "Scissors", "cost": 4.0 },
-    { "name": "Bowl", "cost": 2.8 }
+    { "name": "Toothbrush", "cost": 2.5, "image": "images/toothbrush.jpg" },
+    { "name": "Towel", "cost": 5.0, "image": "images/towel.png" },
+    { "name": "Mug", "cost": 3.0, "image": "images/mug.png" },
+    { "name": "Notebook", "cost": 2.0, "image": "images/notebook.png" },
+    { "name": "Pen", "cost": 1.0, "image": "images/pen.png" },
+    { "name": "Spoon", "cost": 1.5, "image": "images/spoon.png" },
+    { "name": "Plate", "cost": 2.5, "image": "images/plate.png" },
+    { "name": "Soap", "cost": 1.2, "image": "images/soap.png" },
+    { "name": "Scissors", "cost": 4.0, "image": "images/scissors.png" },
+    { "name": "Bowl", "cost": 2.8, "image": "images/bowl.png" }
   ]
 }
