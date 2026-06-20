@@ -70,7 +70,7 @@ function showLottery() {
   app.innerHTML += `
     <div class="lottery-modal">
       <div class="lottery-content">
-        <div class="lottery-letter">cl</div>
+        <div class="lottery-letter">414</div>
         <div>Congratulations! You win the lottery event!</div>
       </div>
     </div>
