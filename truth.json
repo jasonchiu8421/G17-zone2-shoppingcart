@@ -1,9 +1,9 @@
 {
-  "items": [
-    { "name": "Toothbrush", "cost": 30},
-    { "name": "Towel", "cost": 88},
-    { "name": "Plastic plasters", "cost": 56},
-    { "name": "Water bottle", "cost": 23},
-    { "name": "Alarm clock", "cost": 72}
+  "items":[
+{ "name": "Notebook", "cost": 20, "image": "images/notebook.png" },
+    { "name": "Spoon", "cost": 15, "image": "images/spoon.png" },
+    { "name": "Soap", "cost": 12, "image": "images/soap.png" },
+    { "name": "Teapot", "cost": 40, "image": "images/teapot.png" },
+    { "name": "Bowl", "cost": 28, "image": "images/bowl.png" }
   ]
 }
