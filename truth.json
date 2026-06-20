@@ -1,9 +1,9 @@
 {
   "items": [
-    { "name": "Spoon", "cost": 1.5 },
-    { "name": "Plate", "cost": 2.5 },
-    { "name": "Soap", "cost": 1.2 },
-    { "name": "Scissors", "cost": 4.0 },
-    { "name": "Bowl", "cost": 2.8 }
+    { "name": "Toothbrush", "cost": 30},
+    { "name": "Towel", "cost": 88},
+    { "name": "Plastic plasters", "cost": 56},
+    { "name": "Water bottle", "cost": 23},
+    { "name": "Alarm clock", "cost": 72}
   ]
 }
