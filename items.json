@@ -1,13 +1,13 @@
 {
   "items": [
     { "name": "Toothbrush", "cost": 30, "image": "images/toothbrush.png" },
+    { "name": "Notebook", "cost": 20, "image": "images/notebook.png" },
+    { "name": "Spoon", "cost": 15, "image": "images/spoon.png" },
+    { "name": "Soap", "cost": 12, "image": "images/soap.png" },
     { "name": "Towel", "cost": 88, "image": "images/towel.png" },
     { "name": "Plastic plasters", "cost": 56, "image": "images/plasters.png" },
     { "name": "Water bottle", "cost": 23, "image": "images/water_bottle.png" },
     { "name": "Alarm clock", "cost": 72, "image": "images/alarm_clock.png" },
-    { "name": "Notebook", "cost": 20, "image": "images/notebook.png" },
-    { "name": "Spoon", "cost": 15, "image": "images/spoon.png" },
-    { "name": "Soap", "cost": 12, "image": "images/soap.png" },
     { "name": "Teapot", "cost": 40, "image": "images/teapot.png" },
     { "name": "Bowl", "cost": 28, "image": "images/bowl.png" }
   ]
