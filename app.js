@@ -1,9 +1,53 @@
 // Shopping Cart App for Room Escape Game
 const app = document.getElementById('app');
 
-
+let currentPage = 'login';
+const loginPassword = '27639359';
 let truthItems = [];
 let cartItems = [];
+let isCartReady = false;
+
+function renderPage() {
+  if (currentPage === 'login') {
+    renderLogin();
+  } else {
+    renderCart();
+  }
+}
+
+function renderLogin(showError = false) {
+  app.innerHTML = `
+    <div class="login-screen">
+      <div class="login-panel">
+        <div class="login-header">SECURE ACCESS REQUIRED</div>
+        <div class="login-subtitle">Enter password to continue</div>
+        <form class="login-form" onsubmit="submitPassword(event)">
+          <input id="password-input" class="login-input" type="password" placeholder="Password" autocomplete="off" />
+          <button class="login-btn" type="submit">LOGIN</button>
+        </form>
+        <div class="login-hint">Hint: The password is a 8-digit number</div>
+        ${showError ? '<div class="login-error">Wrong password. Try again.</div>' : ''}
+      </div>
+    </div>
+  `;
+}
+
+window.submitPassword = function(event) {
+  event.preventDefault();
+  const input = document.getElementById('password-input');
+  const value = input ? input.value.trim() : '';
+
+  if (value === loginPassword) {
+    currentPage = 'cart';
+    if (isCartReady) {
+      renderCart();
+    } else {
+      app.innerHTML = `<div class="login-loading">Loading shopping cart...</div>`;
+    }
+  } else {
+    renderLogin(true);
+  }
+};
 
 // Fetch both items.json (for cart) and truth.json (for win/lose check)
 Promise.all([
@@ -12,8 +56,13 @@ Promise.all([
 ]).then(([itemsData, truthData]) => {
   cartItems = JSON.parse(JSON.stringify(itemsData.items));
   truthItems = truthData.items;
-  renderCart();
+  isCartReady = true;
+  if (currentPage === 'cart') {
+    renderCart();
+  }
 });
+
+renderPage();
 
 function renderCart() {
   app.innerHTML = `
